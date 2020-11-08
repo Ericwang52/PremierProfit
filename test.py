@@ -58,7 +58,7 @@ for teams in premierdata["teams"]:
         team="Tottenham"
     teamratings[team]=float(teams["strength_overall_away"])
 
-input_file = csv.DictReader(open("/Users/ericwang/Desktop/shit/PremierProfit/E0.csv"))
+input_file = csv.DictReader(open("./E0.csv"))
 for rows in input_file:
     home= rows["HomeTeam"]
     away= rows["AwayTeam"]
@@ -83,7 +83,7 @@ goals={"Arsenal":0, "Aston Villa":0, "Brighton":0, "Burnley":0, "Chelsea":0, "Cr
 "West Brom":0,
 "Watford":0, "West Ham":0, "Wolves":0, "Bournemouth":0
 }
-input_file = csv.DictReader(open("/Users/ericwang/Desktop/shit/PremierProfit/E0 (5).csv"))
+input_file = csv.DictReader(open("./E0 (5).csv"))
 for rows in input_file:
     home= rows["HomeTeam"]
     away= rows["AwayTeam"]
