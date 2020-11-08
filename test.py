@@ -1,12 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
-import numpy as np
-from datapackage import Package
 import csv
-import io
-import urllib.request
 import json
-import urllib
 import requests
 teamdict={"Arsenal":1, "Aston Villa":2, "Brighton":3, "Burnley":4, "Chelsea":5, "Crystal Palace":6, "Everton":7, "Fulham":8, "Leicester":9, 
 "Leeds": 10,
@@ -63,7 +58,7 @@ for teams in premierdata["teams"]:
         team="Tottenham"
     teamratings[team]=float(teams["strength_overall_away"])
 
-input_file = csv.DictReader(open("/Users/ericwang/Desktop/shit/khlbewfvsbdhjlv bkehsvaekbae/E0.csv"))
+input_file = csv.DictReader(open("/Users/ericwang/Desktop/shit/PremierProfit/E0.csv"))
 for rows in input_file:
     home= rows["HomeTeam"]
     away= rows["AwayTeam"]
@@ -88,7 +83,7 @@ goals={"Arsenal":0, "Aston Villa":0, "Brighton":0, "Burnley":0, "Chelsea":0, "Cr
 "West Brom":0,
 "Watford":0, "West Ham":0, "Wolves":0, "Bournemouth":0
 }
-input_file = csv.DictReader(open("/Users/ericwang/Desktop/shit/khlbewfvsbdhjlv bkehsvaekbae/E0 (5).csv"))
+input_file = csv.DictReader(open("/Users/ericwang/Desktop/shit/PremierProfit/E0 (5).csv"))
 for rows in input_file:
     home= rows["HomeTeam"]
     away= rows["AwayTeam"]
