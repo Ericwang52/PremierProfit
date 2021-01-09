@@ -109,7 +109,7 @@ model.add(keras.layers.Dense(3, activation="softmax"))
 
 model.compile(optimizer='adam',   loss=tf.keras.losses.SparseCategoricalCrossentropy(),
               metrics=['accuracy'])
-model.fit(data, ans, epochs=200)
+model.fit(data, ans, epochs=150)
 
 def getOdds(team1, team2):
     return (model.predict([[teamdict[team1], teamdict[team2], 0, goals[team1], goals[team2], card[team1], card[team2], pogplayers[team1], pogplayers[team2]]]))
